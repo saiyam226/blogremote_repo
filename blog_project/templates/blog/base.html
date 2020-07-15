@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%load blog_tags%}
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="{%static "css/blog1.css" %}">
+    <meta charset="utf-8">
+    <title>{%block title_block%}{%endblock%}</title>
+
+  </head>
+  <body>
+    <div class='content'>
+      {%block content%}{%endblock%}
+
+    </div>
+    <div class='sidebar'>
+      <h2>SAIYAM's Blog</h2>
+      <p>The total number of published posts upto today:<span id='pcount'>{%my_tag%}</span> </p>
+      <h3>Latest Posts:</h3>{%show_latest_posts 4%}
+
+    </div>
+  </body>
+</html>
